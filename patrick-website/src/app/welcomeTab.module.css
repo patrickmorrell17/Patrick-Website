@@ -1,0 +1,19 @@
+.title{
+    padding-left: 25px;
+    color: white;
+    /* font-weight: normal; */
+}
+
+.picture{
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 30px;
+    float:left;
+    color: white;
+}
+
+.details{
+    width: 1200px;
+    padding-top: 30px;
+    color: white;
+}
