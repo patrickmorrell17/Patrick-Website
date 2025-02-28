@@ -1,7 +1,6 @@
 .tabDiv {
   margin-top:200px;
   margin-bottom:230px;
-  color: white;
 }
 
 .tab {
@@ -9,5 +8,4 @@
   position: relative;
   width: 200px;
   height: 100px;
-  color: white;
 }

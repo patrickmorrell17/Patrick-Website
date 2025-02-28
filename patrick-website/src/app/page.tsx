@@ -10,10 +10,6 @@ export default function Home() {
 
   return (
     <>
-      <BackgroundImage
-        src="https://github.com/patrickmorrell17/picture-website-patrick/blob/main/VE5OiO.gif?raw=true"
-        radius="sm"
-      >
       <div className={tabStyle.customClass}>
           <Tabs value={activeTab} onChange={setActiveTab}  color="blue" orientation="vertical" classNames={tabStyle}>
             <Tabs.List className={tabStyle.tabDiv}>
@@ -29,7 +25,6 @@ export default function Home() {
             <Tabs.Panel value="Contact">Settings tab content</Tabs.Panel>
           </Tabs>
       </div>
-      </BackgroundImage>
     </>
   );
 }
