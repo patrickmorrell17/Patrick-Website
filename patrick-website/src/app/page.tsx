@@ -1,16 +1,23 @@
 'use client';
-import {Tabs, ScrollArea } from "@mantine/core";
+import {Tabs, ScrollArea,Image } from "@mantine/core";
 import { useState } from 'react';
 import { IconHome,IconMail,IconBrandGithub} from '@tabler/icons-react';
 import tabStyle from './tabStyle.module.css';
 import WelcomeTab from "./welcomeTab";
 
 export default function Home() {
-  const [activeTab, setActiveTab] = useState<string | null>('first');
+  const [activeTab, setActiveTab] = useState<string | null>('Home');
 
   return (
     <>
+        
       <div>
+          <Image h={100}
+            className={tabStyle.image}
+            w="auto"
+            fit="contain" 
+            src="https://raw.githubusercontent.com/patrickmorrell17/picture-website-patrick/refs/heads/main/chrome_BdDrgxhXya.png"
+          />
           <Tabs value={activeTab} onChange={setActiveTab}  color="blue" orientation="vertical" classNames={tabStyle}>
             <Tabs.List>
               <Tabs.Tab  value="Home" leftSection={<IconHome size={30}/>}>Home</Tabs.Tab>
@@ -18,7 +25,7 @@ export default function Home() {
               <Tabs.Tab value="Contact" leftSection={<IconMail size={30}/>}>Contact</Tabs.Tab>
             </Tabs.List>
             <Tabs.Panel value="Home">
-                <ScrollArea h={700} type={"hover"}>
+                <ScrollArea h={900} type={"hover"}>
                   <WelcomeTab/>
                 </ScrollArea>
             </Tabs.Panel>
