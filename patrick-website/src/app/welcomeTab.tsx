@@ -1,5 +1,5 @@
 'use client';
-import {Title, Image, Text, List} from "@mantine/core";
+import {Title, Image, Text, List, BackgroundImage} from "@mantine/core";
 import welcomeTab from "./welcomeTab.module.css";
 import staticText from "../../public/staticText.json";
 import { IconChevronsRight, IconRocket } from '@tabler/icons-react';
@@ -7,6 +7,7 @@ import { IconChevronsRight, IconRocket } from '@tabler/icons-react';
 export default function WelcomeTab() {
   return (
     <>
+    <BackgroundImage h={350} w="auto" src="">
         <Title className={welcomeTab.title} order={1}>{staticText.title}</Title>
         <div className={welcomeTab.picture}>
             <Image h={350}
@@ -64,7 +65,7 @@ export default function WelcomeTab() {
             increased efficiency when researchers were using gas chromatigraph equipment.
             </List.Item>
           </List>
-          
+
           <Title order={5}>F5 Inc - Senior Design Empployee | 02/2021 - 12/2021</Title>
           <List icon={<IconChevronsRight size={20} />} spacing={"md"}>
             <List.Item>Designed a scalable data pipeline for machine learning using Apache Beam, improving data processing capabilities for F5
@@ -72,6 +73,7 @@ export default function WelcomeTab() {
             </List.Item>
           </List>
         </div>
+        </BackgroundImage>
     </>
   );
 }
