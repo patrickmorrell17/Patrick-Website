@@ -11,13 +11,19 @@
 }
 
 .details{
-    width: 1200px;
-    padding-top: 30px;
+    float: right;
+    width: 800px;
+    padding-top: 60px;
+    margin-right: 550px;
 }
 
 .experience{
     padding-left: 150px;
-    width: 1100px;
-    padding-top: 230px;
+    width: 1500px;
+    padding-top: 400px;
     padding-bottom: 50px;
+}
+
+.homeBackground {
+    background-color: #FAFAFA;
 }
