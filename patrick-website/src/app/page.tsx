@@ -1,9 +1,10 @@
 'use client';
-import {Tabs, ScrollArea,Title } from "@mantine/core";
+import {Tabs, ScrollArea,Title,Avatar,Center } from "@mantine/core";
 import { useState } from 'react';
 import { IconHome,IconMail,IconBrandGithub ,IconGolf} from '@tabler/icons-react';
 import tabStyle from './tabStyle.module.css';
 import WelcomeTab from "./welcomeTab";
+import staticText from "../../public/staticText.json";
 
 export default function Home() {
   const [activeTab, setActiveTab] = useState<string | null>('Home');
@@ -11,9 +12,10 @@ export default function Home() {
   return (
     <>
       <div>
-        <Tabs value={activeTab} onChange={setActiveTab}   classNames={tabStyle}>
+        <Tabs value={activeTab} onChange={setActiveTab} classNames={tabStyle}>
           <div className={tabStyle.topBar}>
-            <Title className={tabStyle.logo}>PDM<IconGolf color="Green" size={30}/></Title>
+            <Avatar className={tabStyle.logo} size={75} color="green">PDM<IconGolf color="Green" size={150}/></Avatar>
+              <Title className={tabStyle.title} order={1}>{staticText.title}</Title>
             <Tabs.List>
               <Tabs.Tab  value="Home" leftSection={<IconHome size={30}/>}>Home</Tabs.Tab>
               <Tabs.Tab value="Projects" leftSection={<IconBrandGithub size={30}/>}>Projects and Skills</Tabs.Tab>
