@@ -9,18 +9,20 @@ import {
   Center,
   Table,
   Timeline,
+  Space,
 } from "@mantine/core";
 import welcomeTab from "./welcomeTab.module.css";
 import staticText from "../../public/staticText.json";
 import { IconChevronsRight, IconRocket } from "@tabler/icons-react";
+import {motion} from "framer-motion";
 
 export default function WelcomeTab() {
   return (
     <>
-      <table className={welcomeTab.homeBackground}>
+      <motion.table animate={{scale:1, opacity:1}} initial={{scale:0}} className={welcomeTab.homeBackground}>
         <tbody>
           <tr>
-            <td width={"33%"}>
+            <motion.td whileHover={{ scale: 1.1 }} width={"33%"} className={welcomeTab.cellBorder}>
               <Center>
                 <Image
                   className={welcomeTab.picture}
@@ -28,21 +30,23 @@ export default function WelcomeTab() {
                   w="auto"
                   fit="contain"
                   radius="xl"
-                  src="https://github.com/patrickmorrell17/picture-website-patrick/blob/main/PatrickPic.jpg?raw=true"
+                  src="https://patrickstorage17.blob.core.windows.net/patrickblob/chrome_BdDrgxhXya.png"
                 />
               </Center>
-            </td>
-            <td width={"34%"}>
+            </motion.td>
+            <motion.td whileHover={{ scale: 1.1 }} width={"34%"} className={welcomeTab.cellBorder}>
               <Center>
-                <Text w="75%">
-                  <Text c="blue" size="xl">
-                    {staticText.header}{" "}
-                  </Text>
+                <Text c="blue" fw={700} size="xl">
+                  {staticText.header}{" "}
+                </Text>
+              </Center>
+              <Center mt="md">
+                <Text w="75%" >
                   {staticText.introPara}
                 </Text>
               </Center>
-            </td>
-            <td width={"33%"}>
+            </motion.td>
+            <motion.td whileHover={{ scale: 1.1 }} width={"33%"} className={welcomeTab.timelineCell}>
               <Timeline active={3} bulletSize={24} lineWidth={2}>
                 <Timeline.Item title="Epic System - Full Stack Software Developer | Feb 2022 - Feb 2025">
                   <Text c="dimmed" size="sm">
@@ -62,14 +66,14 @@ export default function WelcomeTab() {
                   </Text>
                 </Timeline.Item>
               </Timeline>
-            </td>
+            </motion.td>
           </tr>
         </tbody>
-      </table>
+      </motion.table>
       <table className={welcomeTab.homeBackground}>
         <tbody>
           <tr className={welcomeTab.spaceUnder}>
-            <td>
+            <motion.td whileHover={{ scale: 1.1 }}>
               <Center>
                 <Card
                   color={"blue"}
@@ -78,10 +82,11 @@ export default function WelcomeTab() {
                   padding="xl"
                   w={"50%"}
                 >
-                  <Title order={5}>
+                  <Text fw={500} size="lg" mt="md">
                     Epic System - Full Stack Software Developer | Feb 2022 - Feb
                     2025
-                  </Title>
+                  </Text>
+                  <Space h="md" />
                   <List icon={<IconChevronsRight size={20} />} spacing={"md"}>
                     <List.Item>
                       Spearheaded 10 development projects to improve reporting
@@ -110,15 +115,16 @@ export default function WelcomeTab() {
                   </List>
                 </Card>
               </Center>
-            </td>
+            </motion.td>
           </tr>
           <tr className={welcomeTab.spaceUnder}>
-            <td>
+            <motion.td whileHover={{ scale: 1.1 }}>
               <Center>
                 <Card withBorder shadow="lg" padding="xl" w={"50%"}>
-                  <Title order={5}>
+                  <Text fw={500} size="lg" mt="md">
                     Tree Top Inc - Software Developer Intern | 05/2020 - 08/2021
-                  </Title>
+                  </Text>
+                  <Space h="md" />
                   <List icon={<IconChevronsRight size={20} />} spacing={"md"}>
                     <List.Item>
                       Accelerated the launch of TreeApp, Tree Top’s new ERP
@@ -134,16 +140,17 @@ export default function WelcomeTab() {
                   </List>
                 </Card>
               </Center>
-            </td>
+            </motion.td>
           </tr>
           <tr className={welcomeTab.spaceUnder}>
-            <td>
+            <motion.td whileHover={{ scale: 1.1 }}>
               <Center>
                 <Card h="100%" withBorder shadow="lg" padding="xl" w={"50%"}>
-                  <Title order={5}>
+                  <Text fw={500} size="lg" mt="md">
                     USDA - Information Management Undergraduate Assistant |
                     09/2019 - 03/2020
-                  </Title>
+                  </Text>
+                  <Space h="md" />
                   <List icon={<IconChevronsRight size={20} />} spacing={"md"}>
                     <List.Item>
                       Assisted with various programming-related projects and the
@@ -159,15 +166,16 @@ export default function WelcomeTab() {
                   </List>
                 </Card>
               </Center>
-            </td>
+            </motion.td>
           </tr>
           <tr className={welcomeTab.spaceUnder}>
-            <td>
+            <motion.td whileHover={{ scale: 1.1 }}>
               <Center>
                 <Card withBorder shadow="lg" padding="xl" w={"50%"}>
-                  <Title order={5}>
+                  <Text fw={500} size="lg" mt="md">
                     F5 Inc - Senior Design Empployee | 02/2021 - 12/2021
-                  </Title>
+                  </Text>
+                  <Space h="md" />
                   <List icon={<IconChevronsRight size={20} />} spacing={"md"}>
                     <List.Item>
                       Designed a scalable data pipeline for machine learning
@@ -178,7 +186,7 @@ export default function WelcomeTab() {
                   </List>
                 </Card>
               </Center>
-            </td>
+            </motion.td>
           </tr>
         </tbody>
       </table>
